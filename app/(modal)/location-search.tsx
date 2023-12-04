@@ -21,6 +21,8 @@ const LocationSearch = () => {
         placeholder="Search or move the map"
         fetchDetails={true}
         onPress={(data, details) => {
+          console.log(data);
+          console.log(details);
           const point = details?.geometry?.location;
           if (!point) return;
           setLocation({
